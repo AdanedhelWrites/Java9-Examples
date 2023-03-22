@@ -17,7 +17,7 @@ public class ArrayQuestion8BenimCozum {
 			}
 			System.out.println("****************FOR SOLUTION*******************");
 			for (int i = 0; i < dizi.length; i++) {//FOR SOLUTION
-				System.out.println(dizi[i]);
+				System.out.println(dizi[i].substring(0, 2) + " plaka kodu " + dizi[i].substring(3) + " ilimize aittir.");
 				
 			}
 
