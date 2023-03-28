@@ -9,7 +9,7 @@ public class MethodDizininSonunaElemanEkleme {
 		int dizi [] = {1,5,7};
 		
 		
-		dizi = diziyeElemanEkle(dizi,5);
+		dizi = diziyeElemanEkle(dizi,65);
 		
 		System.out.println(Arrays.toString(dizi));
 	}
