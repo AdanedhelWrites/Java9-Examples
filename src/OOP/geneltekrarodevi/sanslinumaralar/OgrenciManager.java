@@ -45,6 +45,9 @@ public class OgrenciManager {
 		 ogr.ogrenciler.stream().filter(x -> x.notOrtHesapla() > 50).forEach(y -> y.setDurum("Gecti"));
 		 ogr.ogrenciler.stream().filter(x-> x.notOrtHesapla() <= 50).forEach(y -> y.setDurum("Kaldi"));
 		 
+		 //her bir ögrenciye bir tanede sozlu notu ekleyelim 4.not olarak
+		 
+		 //her bir ogrenin her notuna +5 puan ekleyelim
 			
 		
 	}	
