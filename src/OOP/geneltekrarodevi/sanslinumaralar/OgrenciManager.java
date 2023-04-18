@@ -46,10 +46,24 @@ public class OgrenciManager {
 		 ogr.ogrenciler.stream().filter(x-> x.notOrtHesapla() <= 50).forEach(y -> y.setDurum("Kaldi"));
 		 
 		 //her bir ögrenciye bir tanede sozlu notu ekleyelim 4.not olarak
+		 ogr.ogrenciler.stream().forEach(o -> o.getNotlar().add(80D));	 
+		 
 		 
 		 //her bir ogrenin her notuna +5 puan ekleyelim
+		 ogr.ogrenciler.stream().forEach(o ->{
+			 List<Double> list = new ArrayList<>();
+			 for (int i = 0; i < o.getNotlar().size(); i++) {
+				 if (o.getNotlar().get(i)<96) {
+					list.add(o.getNotlar().get(i)+5);
+				}else {
+					list.add(100D);
+				}
+			 }
+			 o.setNotlar(list);
+			 System.out.println(list);
+		 });
 			
-		
+		ogr.ogrenciler.stream().forEach(o ->o.setNotlar(o.getNotlar().stream().map(x -> x + 5.0).collect(Collectors.toList())));
 	}	
 	
 	public void baslangicVerisi() {
