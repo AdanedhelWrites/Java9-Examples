@@ -37,13 +37,13 @@ public class Taksi implements Runnable{
 	}
 	private long beklemeSureAta() {
 		Random rand = new Random();
-		return rand.nextLong(1000,5000);
+		return rand.nextLong(1000,1010);
 	}
 	@Override
 	public void run() {
 		
 		while (!Durak.getMusteriKuyrugu().isEmpty()) {
-			int musteriNolars = Durak.getMusteriKuyrugu().poll();
+			int musteriNolars = Durak.musteriAl();
 			musteriNolar.add(musteriNolars);
 			System.out.println(id + " nolu taksi " + (musteriNolar.indexOf(musteriNolars)+1)+". musterisini aldi ---> musteri idsi--> " + musteriNolars);
 			try {

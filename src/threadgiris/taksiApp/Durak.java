@@ -15,13 +15,13 @@ public class Durak {
 		taksiOlustur();
 	}
 	public void musteriOlustur() {
-		for (int i = 1; i <= 100; i++) {
+		for (int i = 1; i <= 500; i++) {
 			musteriKuyrugu.add(i);
 		}
 	}
 	
 	public void taksiOlustur() {
-		for (int i = 1; i <= 10 ; i++) {
+		for (int i = 1; i <= 50 ; i++) {
 			Taksi taksi = new Taksi(i);
 			taksiler.add(taksi);
 		}
@@ -43,7 +43,9 @@ public class Durak {
 		return "Durak [taksiler=" + taksiler + ", musteriKuyrugu=" + musteriKuyrugu + "]";
 	}
 	
-	
+	public static synchronized int musteriAl() {
+		return musteriKuyrugu.poll();
+	}
 	
 	
 }
