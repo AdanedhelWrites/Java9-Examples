@@ -1,5 +1,6 @@
 package Methods;
 
+
 public class MethodSoru002 {
 
 	public static void main(String[] args) {
